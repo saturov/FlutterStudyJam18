@@ -11,11 +11,23 @@ void main() {
           appBar: AppBar(
             title: Text("Studyjam Voronezh 2018"),
           ),
-          body: helloRectangle())));
+          body: HelloRectangle())));
 }
 
-Widget helloRectangle() {
-  return Container(
-    color: Colors.deepOrange,
-  );
+class HelloRectangle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Container(
+      color: Colors.deepOrange,
+      height: 400.0,
+      width: 300.0,
+      child: Center(
+        child: Text(
+          'Привет всем!',
+          style: TextStyle(fontSize: 40.0),
+        ),
+      ),
+    ));
+  }
 }
