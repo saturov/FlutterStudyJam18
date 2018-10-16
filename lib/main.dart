@@ -5,7 +5,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Container(
-    color: Colors.deepOrange,
-  ));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("Studyjam Voronezh 2018"),
+          ),
+          body: Container(
+            color: Colors.deepOrange,
+          ))));
 }
