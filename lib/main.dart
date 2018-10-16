@@ -6,12 +6,16 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
             title: Text("Studyjam Voronezh 2018"),
           ),
-          body: Container(
-            color: Colors.deepOrange,
-          ))));
+          body: helloRectangle())));
+}
+
+Widget helloRectangle() {
+  return Container(
+    color: Colors.deepOrange,
+  );
 }
