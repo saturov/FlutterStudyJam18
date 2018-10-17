@@ -3,31 +3,29 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_jam/category.dart';
+
+const _categoryName = 'Cake';
+const _categoryIcon = Icons.cake;
+const _categoryColor = Colors.green;
 
 void main() {
-  runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text("Studyjam Voronezh 2018"),
-          ),
-          body: HelloRectangle())));
+  runApp(UnitConverterApp());
 }
 
-class HelloRectangle extends StatelessWidget {
+class UnitConverterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      color: Colors.deepOrange,
-      height: 400.0,
-      width: 300.0,
-      child: Center(
-        child: Text(
-          'Привет всем!',
-          style: TextStyle(fontSize: 40.0),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Unit Converter',
+      home: Scaffold(
+        backgroundColor: Colors.green[100],
+        body: Center(
+          // TODO: инициализируйте виджет полями
+          child: Category(),
         ),
       ),
-    ));
+    );
   }
 }
